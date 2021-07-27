@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +206,7 @@
       <workItem from="1627237624381" duration="32000" />
       <workItem from="1627283501018" duration="623000" />
       <workItem from="1627313474450" duration="898000" />
-      <workItem from="1627345452025" duration="5945000" />
+      <workItem from="1627345452025" duration="6598000" />
     </task>
     <servers />
   </component>
