@@ -29,9 +29,9 @@
             @endforeach
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <a href="{{ route('logout') }}" class=" btn  btn-danger dropdown-item has-iconç" >
+                    <button type="submit" value="Submit" class=" btn  btn-danger dropdown-item has-iconç" >
                         <center>Submit</center>
-                    </a>
+                    </button>
                 </form>
         </div>
 
