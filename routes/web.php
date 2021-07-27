@@ -28,11 +28,11 @@ use Laravel\Jetstream\Jetstream;
 
 
 Route::get('/dashboard', function () {
-    return redirect(route('register'));
+    return redirect(route('admin.dashboard'));
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('register'));
 });
 
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum', 'web', 'verified'])->group(function () {
