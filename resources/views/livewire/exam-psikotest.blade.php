@@ -10,13 +10,13 @@
                         <div class="form-group">
                             <fieldset id="{{ $q->id }}">
                             @foreach($q->question->questionChoices as $c)
-                                <div class="col-sm-12 row m-3">
-                                    <input class="form-check-input col-sm-2" name="{{ $q->id }}" type="radio"
+                                <div class="form-check">
+                                    <input class="form-check-input" name="{{ $q->id }}" type="radio"
                                            id="{{ \Illuminate\Support\Str::slug($q->question->title.$c->answer) }}"
                                            value="{{ $c->score }}"
                                            wire:click="submitAnswer({{ $q->id }}, '{{ $c->score }}')"
                                            {{ ($q->score==$c->score)? 'checked':'' }}>
-                                    <label class="form-check-label col-sm-9"
+                                    <label class="form-check-label"
                                            for="{{ \Illuminate\Support\Str::slug($q->question->title.$c->answer) }}">{{ $c->answer }}</label>
                                 </div>
                             @endforeach

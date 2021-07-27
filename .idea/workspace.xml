@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/exam.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/aspect.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/question.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/aspect/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/aspect/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/aspect/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/question/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/question/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/question/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_175504_create_statuses_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_contents_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042520_create_tags_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +208,7 @@
       <workItem from="1627237624381" duration="32000" />
       <workItem from="1627283501018" duration="623000" />
       <workItem from="1627313474450" duration="898000" />
-      <workItem from="1627345452025" duration="1024000" />
+      <workItem from="1627345452025" duration="2007000" />
     </task>
     <servers />
   </component>
