@@ -16,12 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Status::create(['title'=>'waiting']);
-        Status::create(['title'=>'accept']);
-        Status::create(['title'=>'decline']);
 
-        Tag::create(['title'=>'tag-1']);
-        Tag::create(['title'=>'tag-2']);
-        Tag::create(['title'=>'tag-3']);
     }
 }

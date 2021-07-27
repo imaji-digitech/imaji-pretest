@@ -9,6 +9,15 @@
     </x-slot>
 
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-        <x-jet-welcome />
+        <div class=" card p-4">
+
+            @if(auth()->user()->role==1)
+                <livewire:data-exam/>
+            @else
+                <a href="{{ route('admin.exam') }}" class="btn btn-primary">
+                    Start Exam
+                </a>
+            @endif
+        </div>
     </div>
 </x-app-layout>

@@ -69,6 +69,42 @@ class Main extends Component
                     ])
                 ];
                 break;
+            case 'aspect':
+                $aspects = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.aspect',
+                    "aspects" => $aspects,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.aspect.create'),
+                            'create_new_text' => 'Create new aspect',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
+            case 'question':
+                $questions = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.question',
+                    "questions" => $questions,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.question.create'),
+                            'create_new_text' => 'Create new question',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
 
             default:
                 # code...

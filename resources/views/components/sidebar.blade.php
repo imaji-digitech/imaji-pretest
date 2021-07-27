@@ -1,41 +1,28 @@
-@php
-$links = [
-    [
-        "href" => "admin.dashboard",
-        "text" => "Dashboard",
-        "is_multi" => false,
-    ],
-    [
-        "href" => [
-            [
-                "section_text" => "Content",
-                "section_list" => [
-                    ["href" => "admin.content.index", "text" => "Data content"],
-                    ["href" => "admin.content.create", "text" => "Create new content"]
-                ]
-            ]
-        ],
-        "text" => "Content",
-        "icon"=>"fa-blog",
-        "is_multi" => true,
-    ],
-    [
-        "href" => [
-            [
-                "section_text" => "User",
-                "section_list" => [
-                    ["href" => "admin.user", "text" => "Data User"],
-                    ["href" => "admin.user.new", "text" => "Buat User"]
-                ]
-            ]
-        ],
-        "text" => "User",
-        "icon"=>"fa-users",
-        "is_multi" => true,
-    ],
-];
-$navigation_links = array_to_object($links);
-@endphp
+{{--@php--}}
+{{--$links = [--}}
+{{--    [--}}
+{{--        "href" => "admin.dashboard",--}}
+{{--        "text" => "Dashboard",--}}
+{{--        "is_multi" => false,--}}
+{{--    ],--}}
+
+{{--    [--}}
+{{--        "href" => [--}}
+{{--            [--}}
+{{--                "section_text" => "User",--}}
+{{--                "section_list" => [--}}
+{{--                    ["href" => "admin.user", "text" => "Data User"],--}}
+{{--                    ["href" => "admin.user.new", "text" => "Buat User"]--}}
+{{--                ]--}}
+{{--            ]--}}
+{{--        ],--}}
+{{--        "text" => "User",--}}
+{{--        "icon"=>"fa-users",--}}
+{{--        "is_multi" => true,--}}
+{{--    ],--}}
+{{--];--}}
+{{--$navigation_links = array_to_object($links);--}}
+{{--@endphp--}}
 
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
@@ -47,34 +34,24 @@ $navigation_links = array_to_object($links);
                 <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
             </a>
         </div>
-        @foreach ($navigation_links as $link)
+        {{--        @foreach ($navigation_links as $link)--}}
         <ul class="sidebar-menu">
-            <li class="menu-header">{{ $link->text }}</li>
-            @if (!$link->is_multi)
-            <li class="{{ Request::routeIs($link->href) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route($link->href) }}"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            <li class="menu-header">Dashboard</li>
+            <li class="">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}"><i
+                        class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-            @else
-                @foreach ($link->href as $section)
-                    @php
-                    $routes = collect($section->section_list)->map(function ($child) {
-                        return Request::routeIs($child->href);
-                    })->toArray();
+            @if(auth()->user()->role==1)
+                <li class="">
+                    <a class="nav-link" href="{{ route('admin.aspect.index') }}"><i
+                            class="fas fa-fire"></i><span>Aspect</span></a>
+                </li>
 
-                    $is_active = in_array(true, $routes);
-                    @endphp
-
-                    <li class="dropdown {{ ($is_active) ? 'active' : '' }}">
-                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas {{$link->icon}}"></i> <span>{{ $section->section_text }}</span></a>
-                        <ul class="dropdown-menu">
-                            @foreach ($section->section_list as $child)
-                                <li class="{{ Request::routeIs($child->href) ? 'active' : '' }}"><a class="nav-link" href="{{ route($child->href) }}">{{ $child->text }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-                @endforeach
+                <li class="">
+                    <a class="nav-link" href="{{ route('admin.question.index') }}"><i class="fas fa-question"></i><span>Question</span></a>
+                </li>
             @endif
+
         </ul>
-        @endforeach
     </aside>
 </div>

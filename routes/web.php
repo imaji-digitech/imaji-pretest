@@ -1,14 +1,19 @@
 <?php
 
-use App\Http\Controllers\Admin\ContentController;
+use App\Http\Controllers\AspectController;
+use App\Http\Controllers\AspectsController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\SupportController;
 use App\Http\Controllers\UserController;
+use App\Models\Question;
+use App\Models\UserAnswer;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
 use Laravel\Jetstream\Http\Controllers\Livewire\TeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 use Laravel\Jetstream\Jetstream;
-use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,21 +27,31 @@ use Illuminate\Support\Facades\Storage;
 */
 
 
-
 Route::get('/dashboard', function () {
-    return redirect(route('admin.dashboard'));
+    return redirect(route('register'));
 });
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
-    Route::post('/summernote-upload',[\App\Http\Controllers\SupportController::class,'upload'])->name('summernote_upload');
+Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum', 'web', 'verified'])->group(function () {
+    Route::post('/summernote-upload', [SupportController::class, 'upload'])->name('summernote_upload');
     Route::view('/dashboard', "dashboard")->name('dashboard');
-    Route::resource('content', ContentController::class)->only(['index','create','edit']);
 
-    Route::get('/user', [ UserController::class, "index" ])->name('user');
+    Route::get('/start-exam-psikotest', function () {
+        if (UserAnswer::whereUserId(auth()->id())->get()->count() == 0) {
+            foreach (Question::get() as $q) {
+                UserAnswer::create(['user_id' => auth()->id(), 'question_id' => $q->id]);
+            }
+        }
+        return view('exam');
+    })->name('exam');
+
+    Route::resource('aspect', AspectController::class)->only(['index', 'create', 'edit']);
+    Route::resource('question', QuestionController::class)->only(['index', 'create', 'edit']);
+
+    Route::get('/user', [UserController::class, "index"])->name('user');
     Route::view('/user/new', "pages.user.create")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.edit")->name('user.edit');
 

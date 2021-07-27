@@ -71,4 +71,8 @@ class User extends Authenticatable
             : static::where('name', 'like', '%'.$query.'%')
                 ->orWhere('email', 'like', '%'.$query.'%');
     }
+    public function userAnswers()
+    {
+        return $this->hasMany('App\Models\UserAnswer');
+    }
 }
