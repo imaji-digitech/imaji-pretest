@@ -46,7 +46,17 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum', 'web', 'veri
             }
         }
         return view('exam');
-    })->name('exam');
+    })->name('exam.psikotest');
+
+    Route::get('/start-exam-calistung', function () {
+        if (UserAnswer::whereUserId(auth()->id())->get()->count() == 0) {
+            foreach (Question::get()->where  as $q) {
+                UserAnswer::create(['user_id' => auth()->id(), 'question_id' => $q->id]);
+            }
+        }
+        return view('exam');
+    })->name('exam.calistung');
+
 
     Route::resource('aspect', AspectController::class)->only(['index', 'create', 'edit']);
     Route::resource('question', QuestionController::class)->only(['index', 'create', 'edit']);

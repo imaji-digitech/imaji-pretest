@@ -1,7 +1,7 @@
 <div id="form-create" class=" card p-4">
     <form wire:submit.prevent="{{$action}}">
 
-        <x-input type="text" title="Question" model="question.title"/>
+        <x-summernote type="text" title="Question" model="question.title"/>
         <x-select :options="$optionAspect" :selected="$question['aspect_id']" title="Aspect question" model="question.aspect_id"/>
 
         <x-input type="text" title="Answer A" model="choiceAnswer.0"/>

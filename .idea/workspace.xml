@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="" />
+    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DataExam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DataExam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ExamPsikotest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ExamPsikotest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserAnswer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserAnswer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note" beforeDir="false" afterPath="$PROJECT_DIR$/note" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/example/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/example/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/data-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/data-exam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-question.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/table/question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/table/question.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +37,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -206,7 +231,13 @@
       <workItem from="1627237624381" duration="32000" />
       <workItem from="1627283501018" duration="623000" />
       <workItem from="1627313474450" duration="898000" />
-      <workItem from="1627345452025" duration="6598000" />
+      <workItem from="1627345452025" duration="7875000" />
+      <workItem from="1628647624484" duration="342000" />
+      <workItem from="1628648042868" duration="10920000" />
+      <workItem from="1628667074401" duration="22000" />
+      <workItem from="1629601868031" duration="13480000" />
+      <workItem from="1629884643958" duration="1268000" />
+      <workItem from="1629983517181" duration="1520000" />
     </task>
     <servers />
   </component>

@@ -14,8 +14,8 @@
             @if(auth()->user()->role==1)
                 <livewire:data-exam/>
             @else
-                <a href="{{ route('admin.exam') }}" class="btn btn-primary">
-                    Start Exam
+                <a href="{{ route('admin.exam.psikotest') }}" class="btn btn-primary">
+                    Lakukan Psikotest
                 </a>
             @endif
         </div>

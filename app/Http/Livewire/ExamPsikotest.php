@@ -20,7 +20,7 @@ class ExamPsikotest extends Component
         return view('livewire.exam-psikotest');
     }
 
-    public function submitAnswer($id,$score){
-        UserAnswer::find($id)->update(['score'=>$score]);
+    public function submitAnswer($id,$score,$pg){
+        UserAnswer::find($id)->update(['score'=>$score,'answer'=>$pg]);
     }
 }

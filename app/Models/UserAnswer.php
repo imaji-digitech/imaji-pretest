@@ -18,7 +18,7 @@ class UserAnswer extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -26,7 +26,7 @@ class UserAnswer extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'question_id', 'score', 'created_at', 'updated_at'];
+    protected $fillable = ['user_id', 'question_id', 'score', 'answer','created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
