@@ -75,4 +75,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\UserAnswer');
     }
+    public function pretestUserAnswers()
+    {
+        return $this->hasMany('App\Models\PretestUserAnswer');
+    }
 }

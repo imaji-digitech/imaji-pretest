@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
+    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_23_061108_create_pretest_aspects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_23_070907_create_pretest_questions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_23_071017_create_pretest_question_choises_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_23_071028_create_pretest_user_answer_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/pretest-aspect.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/pretest-question.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/calistung.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-aspect/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-aspect/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-aspect/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-question/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-question/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest-question/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/pretest.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pretest-exam.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DataExam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DataExam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ExamPsikotest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ExamPsikotest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserAnswer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserAnswer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionChoiceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FormAspect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/FormAspect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note" beforeDir="false" afterPath="$PROJECT_DIR$/note" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_23_071029_create_user_answer_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_23_071029_create_user_answer_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/select.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/example/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/example/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/data-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/data-exam.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/exam-psikotest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-question.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-aspect.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-aspect.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/table/question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/table/question.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -187,20 +201,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire/table" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/livewire/table" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/pages" />
       <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -238,7 +253,17 @@
       <workItem from="1629601868031" duration="13480000" />
       <workItem from="1629884643958" duration="1268000" />
       <workItem from="1629983517181" duration="1520000" />
+      <workItem from="1630375867417" duration="28399000" />
+      <workItem from="1630477504552" duration="14488000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1630376067429</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630376067429</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,5 +280,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

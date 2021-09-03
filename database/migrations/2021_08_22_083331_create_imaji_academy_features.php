@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserAnswerTable extends Migration
+class CreateImajiAcademyFeatures extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,19 @@ class CreateUserAnswerTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_answers', function (Blueprint $table) {
+        Schema::create('imaji_academy_features', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('question_id');
-            $table->integer('score');
-            $table->integer('answer');
+            $table->unsignedBigInteger('imaji_academy_id');
+            $table->unsignedBigInteger('feature_id');
             $table->timestamps();
-            $table->foreign('question_id')
+            $table->foreign('feature_id')
                 ->references('id')
-                ->on('questions')
+                ->on('features')
                 ->onDelete('restrict')
                 ->cascadeOnUpdate();
-            $table->foreign('user_id')
+            $table->foreign('imaji_academy_id')
                 ->references('id')
-                ->on('users')
+                ->on('imaji_academies')
                 ->onDelete('restrict')
                 ->cascadeOnUpdate();
         });
@@ -40,6 +38,6 @@ class CreateUserAnswerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_answer');
+        Schema::dropIfExists('imaji_academy_features');
     }
 }

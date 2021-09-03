@@ -3,9 +3,10 @@
 namespace App\Http\Livewire;
 
 use App\Models\Aspect;
+use App\Models\PretestAspect;
 use Livewire\Component;
 
-class FormAspect extends Component
+class PretestFormAspect extends Component
 {
     public $action;
     public $aspect;
@@ -13,12 +14,16 @@ class FormAspect extends Component
 
     public function mount(){
         $this->aspect=[
-            'title'=>''
+            'title'=>'',
+            'time'=>0,
+            'description'=>'',
         ];
         if ($this->dataId!=null){
-            $aspect=Aspect::find($this->dataId);
+            $aspect=PretestAspect::find($this->dataId);
             $this->aspect=[
-                'title'=>$aspect->title
+                'title'=>$aspect->title,
+                'time'=>$aspect->time,
+                'description'=>$aspect->description,
             ];
         }
     }
@@ -32,29 +37,29 @@ class FormAspect extends Component
     public function create(){
         $this->validate();
         $this->resetErrorBag();
-        Aspect::create($this->aspect);
+        PretestAspect::create($this->aspect);
         $this->emit('swal:alert', [
             'type' => 'success',
             'title' => 'Data updated successfully',
             'timeout' => 3000,
             'icon' => 'success'
         ]);
-        $this->emit('redirect', route('admin.aspect.index'));
+        $this->emit('redirect', route('admin.pretest-aspect.index'));
     }
     public function update(){
         $this->validate();
         $this->resetErrorBag();
-        Aspect::find($this->dataId)->update($this->aspect);
+        PretestAspect::find($this->dataId)->update($this->aspect);
         $this->emit('swal:alert', [
             'type' => 'success',
             'title' => 'Data updated successfully',
             'timeout' => 3000,
             'icon' => 'success'
         ]);
-        $this->emit('redirect', route('admin.aspect.index'));
+        $this->emit('redirect', route('admin.pretest-aspect.index'));
     }
     public function render()
     {
-        return view('livewire.form-aspect');
+        return view('livewire.pretest-form-aspect');
     }
 }
