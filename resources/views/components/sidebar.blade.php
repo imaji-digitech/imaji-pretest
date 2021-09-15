@@ -62,7 +62,7 @@
                 <li class="menu-header">Pretest</li>
 
                 <li class="">
-                    <a class="nav-link" href="{{ route('admin.calistung') }}">
+                    <a class="nav-link" href="{{ route('admin.pretest') }}">
                         <i class="fas fa-fire"></i><span>Hasil Pretest</span>
                     </a>
                 </li>

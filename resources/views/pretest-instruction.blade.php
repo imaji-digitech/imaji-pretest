@@ -9,7 +9,15 @@
 
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         <div class="p-4">
-            <livewire:pretest-data-exam/>
+            <livewire:pretest-instruction aspect="{{$id}}"/>
+            <a href="{{route('admin.exam.pretest',$id)}}" class="btn btn-primary">Lakukan ujian</a>
         </div>
     </div>
+    <script>
+        $( document ).ready(function() {
+            setTimeout(function () {
+                window.location.href = data;
+            }, 180000);
+        });
+    </script>
 </x-app-layout>

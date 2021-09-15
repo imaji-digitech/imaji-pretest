@@ -9,6 +9,7 @@ use App\Models\PretestQuestion;
 use App\Models\PretestUserAnswer;
 use App\Models\Question;
 use App\Models\UserAnswer;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
@@ -97,6 +98,10 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum', 'web', 'veri
         return view('pages.question.edit', compact('id'));
     })->name('question.edit');
 
+    Route::get('pretest', function () {
+        return view('pages.pretest');
+    })->name('pretest');
+
     Route::get('pretest/aspect', function () {
         return view('pages.pretest-aspect.index', ['pretestAspect' => PretestAspect::class]);
     })->name('pretest-aspect.index');
@@ -117,20 +122,51 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum', 'web', 'veri
         return view('pages.pretest-question.edit', compact('id'));
     })->name('pretest-question.edit');
 
-    Route::get('/start-exam-pretest/{id}', function ($id) {
-        if (PretestUserAnswer::whereUserId(auth()->id())
-                ->whereHas('pretestQuestion', function ($q) use ($id) {
-                    $q->wherePretestAspectId($id);
-                })->get()->count() == 0) {
+    Route::get('/exam/{id}', function ($id) {
+        $user = PretestUserAnswer::whereUserId(auth()->id())
+            ->whereHas('pretestQuestion', function ($q) use ($id) {
+                $q->wherePretestAspectId($id);
+            })->get();
+        if ($user->count() == 0) {
             foreach (PretestQuestion::wherePretestAspectId($id)->get() as $q) {
                 PretestUserAnswer::create([
                     'user_id' => auth()->id(), 'pretest_question_id' => $q->id
                 ]);
             }
+        } else {
+            $pua = PretestUserAnswer::find($user[0]->id);
+            if ($pua->created_at->addMinutes($pua->pretestQuestion->pretestAspect->time) <= Carbon::now()) {
+                if ($id + 1 == 7) {
+                    return redirect(route('admin.dashboard'));
+                }
+                return redirect(route('admin.exam.instruction', $id + 1));
+            }
         }
-        return view('pretest-exam',compact('id'));
-
+        return view('pretest-exam', compact('id'));
     })->name('exam.pretest');
+
+    Route::get('/instruction/{id}', function ($id) {
+        $user = PretestUserAnswer::whereUserId(auth()->id())
+            ->whereHas('pretestQuestion', function ($q) use ($id) {
+                $q->wherePretestAspectId($id);
+            })->get();
+        if ($user->count() == 0) {
+            foreach (PretestQuestion::wherePretestAspectId($id)->get() as $q) {
+                PretestUserAnswer::create([
+                    'user_id' => auth()->id(), 'pretest_question_id' => $q->id
+                ]);
+            }
+        } else {
+            $pua = PretestUserAnswer::find($user[0]->id);
+            if ($pua->created_at->addMinutes($pua->pretestQuestion->pretestAspect->time) <= Carbon::now()) {
+                if ($id + 1 == 7) {
+                    return redirect(route('admin.dashboard'));
+                }
+                return redirect(route('admin.exam.instruction', $id + 1));
+            }
+        }
+        return view('pretest-instruction', compact('id'));
+    })->name('exam.instruction');
 
     Route::get('/user', [UserController::class, "index"])->name('user');
     Route::view('/user/new', "pages.user.create")->name('user.new');

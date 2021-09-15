@@ -1,12 +1,6 @@
-<div>
+<div wire:poll="check">
     <div class="row p-3">
         <div class="col-lg-12 col-sm-12 ">
-            <div>
-
-                    {!! $description->description !!}
-
-            </div>
-            <br>
             @foreach($questions as $index=>$q)
                 <div class="card">
                     <div class="card-header {{($q->answer!=null or $q->answer!='')? 'bg-primary':''}} ">
@@ -65,7 +59,7 @@
                     </div>
                 </div>
             @endforeach
-            <a href="{{route('admin.dashboard')}}" class="btn btn-success" style="width: 100%">Selesai</a>
+            {{--            <a href="{{route('admin.dashboard')}}" class="btn btn-success" style="width: 100%">Selesai</a>--}}
         </div>
     </div>
 
