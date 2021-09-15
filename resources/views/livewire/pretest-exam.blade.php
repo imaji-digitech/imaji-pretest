@@ -16,7 +16,7 @@
                                     @php($pg=1)
                                     <div class="row">
                                         @foreach($q->pretestQuestion->pretestQuestionChoices as $c)
-                                            <div class="form-check" style="width: 20%">
+                                            <div class="form-check col-md-2">
                                                 <input class="form-check-input" name="{{ $q->id }}" type="radio"
                                                        id="{{ \Illuminate\Support\Str::slug($q->pretestQuestion->title.$c->answer) }}"
                                                        value="{{ $pg }}"
