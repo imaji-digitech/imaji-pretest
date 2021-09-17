@@ -31,7 +31,7 @@
                                 </fieldset>
                             @elseif($q->pretestQuestion->question_type==2)
                                 @for($i=0;$i<10;$i++)
-                                    <div class="form-check form-check-inline" style="width: 8%">
+                                    <div class="form-check form-check-inline col-md-1">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
                                                value="{{$i}}"
                                                name="check"
