@@ -29,12 +29,7 @@
                     </div>
                 </div>
             @endforeach
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" value="Submit" class=" btn  btn-danger dropdown-item has-iconç" >
-                        <center>Submit</center>
-                    </button>
-                </form>
+                <a href="{{ route('admin.dashboard') }}"></a>
         </div>
     </div>
 
