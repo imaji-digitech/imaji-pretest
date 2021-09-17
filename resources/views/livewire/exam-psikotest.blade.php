@@ -29,7 +29,7 @@
                     </div>
                 </div>
             @endforeach
-                <a href="{{ route('admin.dashboard') }}"></a>
+                <a href="{{ route('admin.dashboard') }}" class="btn btn-primary" style="width: 100%">Selesai</a>
         </div>
     </div>
 
