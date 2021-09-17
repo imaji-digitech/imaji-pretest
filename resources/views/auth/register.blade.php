@@ -16,7 +16,22 @@
                 <x-jet-input class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-{{--            <div class="mt-4">--}}
+            <div>
+                <x-jet-label value="{{ __('Umur') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="age" :value="old('age')" required autofocus autocomplete="age" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Hobi') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="hobby" :value="old('hobby')" required autofocus autocomplete="hobby" />
+            </div>
+
+            <div>
+                <x-jet-label value="{{ __('Feature') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="feature" :value="old('feature')" required autofocus autocomplete="feature" />
+            </div>
+
+            {{--            <div class="mt-4">--}}
 {{--                <x-jet-label value="{{ __('Email') }}" />--}}
 {{--                <x-jet-input class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />--}}
 {{--            </div>--}}
